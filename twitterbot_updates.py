@@ -5,10 +5,10 @@ import json
 from bs4 import BeautifulSoup
 import lxml
 
-CONSUMER_KEY='do1ok6H7WjsOMOSuG7jgAvj8F'#key
-CONSUMER_SECRET='ddhPeZWBOx5oI4ruLrqAaTest5XZnlXU7eZpThoEAMBoujNfZq'#sectetkey
-ACCESS_KEY='1154749906961088513-BRLqmkUOfxp0ogTH24pYbIhBxcbhxJ'#acesskey
-ACCESS_SECRET='zTM15Pdys2IzvWLksoAHcd9mIzjO187mI9ksqe7lJ7iT7'#secret accesskey
+CONSUMER_KEY='xxxx'#key
+CONSUMER_SECRET='xxxx'#sectetkey
+ACCESS_KEY='xxxxxxxxx'#acesskey
+ACCESS_SECRET='xxxxxx'#secret accesskey
 
 auth=tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY,ACCESS_SECRET)
