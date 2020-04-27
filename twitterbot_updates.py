@@ -70,8 +70,15 @@ def reply_to_tweet():
             #print(value)
     #print(info)
     dialogue=" In India Confirm ->"+str(info['India'][0])+" Death ->"+str(info['India'][1])+" Recoverd ->"+str(info['India'][2])
-    api.update_status(status =dialogue)
-
+    
+    try:
+        api.update_status(status =dialogue)
+    except tweepy.TweepError as error:
+        if error.api_code == 187:
+            # Do something special
+            print('someting is wrong')
+    else:
+        pass
 
 
 while(True):
