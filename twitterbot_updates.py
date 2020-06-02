@@ -54,7 +54,7 @@ def reply_to_tweet():
     #result=soup.find_all(id='thetable')
     result=soup.find('table',attrs={'class':"wikitable"}).tbody
     rows=result.find_all('tr')
-    col=[v.text.replace("\n"," ") for v in rows[0].find_all('th')]
+    #col=[v.text.replace("\n"," ") for v in rows[0].find_all('th')]
     #print(col)
     info={}
     for i in range(2,21):
@@ -65,10 +65,11 @@ def reply_to_tweet():
             info[pp.text].append(datas[0].text.replace("\n"," "))
             info[pp.text].append(datas[1].text.replace("\n"," "))
             info[pp.text].append(datas[2].text.replace("\n"," "))
-
+            
             #value=[datas[0].text.replace("\n"," "),datas[1].text.replace("\n"," "),datas[2].text.replace("\n"," ")]
             #print(value)
     #print(info)
+    #For extracting information about your country change keyword 'Indie" into your country name as listed in Wikipedia corona table then increase range in line 60(more than your country's rank
     dialogue=" In India Confirm ->"+str(info['India'][0])+" Death ->"+str(info['India'][1])+" Recoverd ->"+str(info['India'][2])
     
     try:
